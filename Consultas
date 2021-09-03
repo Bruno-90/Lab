@@ -1,0 +1,50 @@
+
+insert into Paises(ID,Descripcion)
+select 1,'Argentina' go
+select * from paises
+delete from Paises
+where ID=11
+
+insert into Paises(ID,Descripcion)
+select 2,'Uruguay' go
+
+insert into Paises(ID,Descripcion)
+select 3,'Paraguay' go
+
+insert into Paises(ID,Descripcion)
+select 4,'Brasil' go
+
+insert into Paises(ID,Descripcion)
+select 5,'Chile' go
+
+insert into Provincias(ID,IDPais,Descripcion)
+select 1,1,'Buenos Aires' go
+
+insert into Provincias(ID,IDPais,Descripcion)
+select 2,1,'Cordoba' go
+
+insert into Provincias(ID,IDPais,Descripcion)
+select 3,1,'Mendoza' go
+
+insert into Provincias(ID,IDPais,Descripcion)
+select 4,1,'Neuquen' go
+
+
+select * from empresas
+
+insert into Direcciones(ID,IDCiudad,Calle,Numero)
+select 1,3,'Colectora Autopista Panamericana Ramal Pilar Sur','KM 36,5' go
+
+insert into Categorias(ID,Descripcion)
+select 1,'Laboratorio' go
+
+
+--LA RAZON SOCIAL ESTA MAL LA VARIABLE ES VARCHAR
+
+insert into Empresas(ID,IDDireccion,IDCategoria,RazonSocial,Telefono)
+select 1,1,1,'Laboratorio Bernabo','4501-3213' go
+
+--YA LO MODIFIQUE
+
+ALTER TABLE empresas alter column RazonSocial varchar(50)
+
